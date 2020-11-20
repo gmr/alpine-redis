@@ -1,0 +1,22 @@
+---
+name: Publish Docker image
+on:
+  push:
+    branches:
+      - master
+  release:
+    types:
+      - published
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: gavinmroy
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: gavinmroy/alpine-redis
+          tag_with_ref: true

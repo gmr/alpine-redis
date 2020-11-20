@@ -15,4 +15,10 @@ docker run --name redis -p 6379 gavinmroy/alpine-redis:latest
 
 ## Changelog
 
-- Update to Alpine 3.8, Redis 4.0.11, add healtcheck
+### 2020-11-20
+
+Update to Alpine 3.12, Redis 5.0.9, add healtcheck
+
+### 2018-11-30
+
+Update to Alpine 3.8, Redis 4.0.11, add healtcheck
